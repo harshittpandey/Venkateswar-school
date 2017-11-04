@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html>
+<title>Venkateswar School</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/icon2.ico" >
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<meta name="description" content="Animated Opening Type: Animated letters with pseudo-elements" />
+<meta name="keywords" content="pseudo-elements, letters, css, animated, transition, opening, cut-out, inspiration" />
+
+ <link rel="stylesheet" href="http://idangero.us/swiper/dist/css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="css/libs/animate.css">
+<link rel="stylesheet" href="css/site.css">
+
+<script src="js/modernizr.custom.js"></script>
+<style>
+.wow:first-child {
+      visibility: hidden;
+    }
+body {font-family: "Raleway", Arial, sans-serif}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+.w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+.swiper-container {
+        width: 100%;
+        height: 70%;
+    }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+        /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+     align-items: center;
+    }
+
+    input[type=text] {
+    width: 68%;
+    padding: 6px 12px;
+    margin: 8px 0;
+    border : none;
+    border-bottom: 2px solid black;
+}
+
+textarea {
+    width: 60%;
+    height: 160px;
+    padding: 12px 20px;
+    border-:none; 
+    border-bottom: : 2px solid black;
+    font-size: 16px;
+    resize: none;
+}
+
+
+
+.w3-row img {margin-bottom: -8px}
+
+#floating-button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #db4437;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px #666;
+}
+
+.plus{
+  color: white;
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 50px;
+  font-size: 35px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  animation: plus-out 0.3s;
+  transition: all 0.3s;
+}
+
+#container-floating{
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 30px;
+  left: 30px;
+  z-index: 50px;
+}
+
+#container-floating:hover{
+  height: 400px;
+  width: 90px;
+  padding: 30px;
+}
+
+#container-floating:hover .plus{
+  animation: plus-in 0.15s linear;
+  animation-fill-mode: forwards;
+}
+
+.edit{
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  display: block;
+  right: 0;
+  padding: 0;
+  opacity: 0;
+  margin: auto;
+  line-height: 65px;
+  transform: rotateZ(-70deg);
+  transition: all 0.3s;
+  animation: edit-out 0.3s;
+}
+
+#container-floating:hover .edit{
+  animation: edit-in 0.2s;
+   animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes edit-in{
+    from {opacity: 0; transform: rotateZ(-70deg);}
+    to {opacity: 1; transform: rotateZ(0deg);}
+}
+
+@keyframes edit-out{
+    from {opacity: 1; transform: rotateZ(0deg);}
+    to {opacity: 0; transform: rotateZ(-70deg);}
+}
+
+@keyframes plus-in{
+    from {opacity: 1; transform: rotateZ(0deg);}
+    to {opacity: 0; transform: rotateZ(180deg);}
+}
+
+@keyframes plus-out{
+    from {opacity: 0; transform: rotateZ(180deg);}
+    to {opacity: 1; transform: rotateZ(0deg);}
+}
+
+.nds{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform:  scale(0);
+  cursor: pointer;
+}
+
+.nd1{
+  background: #d3a411;
+  left: 40px;
+  bottom: 120px;
+  animation-delay: 0.2s;
+    animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode:  forwards;
+}
+
+.nd4{
+  background: WHITE;
+  left: 40px;
+  bottom: 180px;
+  animation-delay: 0.1s;
+    animation: bounce-out-nds 0.1s linear;
+  animation-fill-mode:  forwards;
+}
+
+@keyframes bounce-nds{
+    from {opacity: 0;}
+    to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes bounce-out-nds{
+    from {opacity: 1; transform: scale(1);}
+    to {opacity: 0; transform: scale(0);}
+}
+
+#container-floating:hover .nds{
+  
+  animation: bounce-nds 0.1s linear;
+  animation-fill-mode:  forwards;
+}
+
+#container-floating:hover .nd3{
+  animation-delay: 0.08s;
+}
+#container-floating:hover .nd4{
+  animation-delay: 0.15s;
+}
+#container-floating:hover .nd5{
+  animation-delay: 0.2s;
+}
+
+.letter{
+  font-size: 23px;
+  font-family: 'Roboto';
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 40px;
+}
+
+.reminder{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  line-height: 40px;
+}
+
+.profile{
+  border-radius: 50%;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+}
+
+.map-text{
+display: none;
+}
+.map:hover .map-text{
+  display: block;
+
+}
+.scroll-downs {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width :34px;
+  height: 55px;
+  cursor:hand;
+}
+.mousey {
+ position: absolute;
+ top: 75%;
+  width: 2px;
+  padding: 6px 10px;
+  height: 45px;
+  border: 2px solid #808080;
+  border-radius: 15px;
+  opacity: 0.75;
+  cursor:pointer;
+}
+.scroller {
+  width: 2px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: WHITE;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+.demo-text{
+display: none;
+}
+.scroll-downs:hover  .scroller-text{
+  display: block;
+
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+
+
+#section10 a {
+  padding-top: 60px;
+}
+#section10 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40px;
+  height: 60px;
+  margin-left: -15px;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#section10 a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #000000;
+  border-radius: 100%;
+  -webkit-animation: sdb10 2s infinite;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  right: 10%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #000000;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  display: block;
+  opacity: .5;
+
+}
+
+.demo :hover  .demo-text{
+  display: block; 
+
+}
+.close  {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover , .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+</style>
+<body>
+
+
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                              scroll mouse                                                                                 -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+
+   <section id="section10" class="w3-hide-medium w3-hide-small demo w3-right" style="margin-left:90% ;position: fixed ; margin-top: 25%;cursor: pointer">
+       <a ><span></span>
+           <li class="demo-text w3-myfont w3-animate-bottom" style="width: 100px;margin-top: 25%;margin-left: 90%;position: fixed">Scroll down</li> 
+       </a>
+   </section>
+
+
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                              floating Button                                                                               -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+
+<div id="container-floating">
+
+      <div class="nd4 nds map" >
+            <a class="letter " href="https://www.google.co.in/maps/place/ABES/@28.6338063,77.4439844,17z/data=!3m1!4b1!4m5!3m4!1s0x390cee3d2df45167:0x3942e55a855965a9!8m2!3d28.6338063!4d77.4461731"><img src="images/map.png" style="width: 70%"></a>
+             <div style="margin-left: 40px ">
+                     <span class="map-text w3-margin-left w3-large" >Location</span>
+             </div>
+       </div>
+
+
+      <div class="nd1 nds map" >
+             <a class="letter " href="telephone.html"><img src="images/phone.png" style="width: 60%"></a>
+             <div style="margin-left: 40px "><span class="map-text w3-margin-left w3-large" >Telephone Diary</span>
+             </div>    
+      </div>
+
+
+       <div id="floating-button" >
+              <p class="plus">+</p>
+              <img class="edit" src="images/contact.png">
+       </div>
+</div>
+
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                              hero cover                                                                               -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+<!--large screen-->
+<!--_______________________________________________________________________________________________________________________________________________-->
+
+
+<div class="w3-hide-small w3-hide-medium">
+     <div  style="background-color: #2D2D2D" id="home">
+         <img  src="images\icon.png" style="width: 20%;height: 20%;margin-left: 35%;margin-top: 2%">
+      </div>
+     <div class="container">
+         <div class="component">
+           <ul class="grid "  >
+               <li class="ot-letter-left" style="margin-top:5%;"><span data-letter="V">V</span></li>
+               <li class="ot-letter-top" style="margin-top:5%;"><span data-letter="E">E</span></li>
+               <li class="ot-letter-right" style="margin-top:5%;"><span data-letter="N">N</span></li>
+                <li class="ot-letter-bottom" style="margin-top:5%;"><span data-letter="K">K</span></li>
+                <li class="ot-letter-left" style="margin-top:5%;"><span data-letter="A">A</span></li>
+                <li class="ot-letter-top" style="margin-top:5%;"><span data-letter="T">T</span></li>
+                 <li class="ot-letter-right" style="margin-top:5%;"><span data-letter="E">E</span></li>
+                 <li class="ot-letter-left" style="margin-top:5%;"><span data-letter="S">S</span></li>
+                 <li class="ot-letter-top" style="margin-top:5%;"><span data-letter="W">W</span></li>
+                 <li class="ot-letter-right" style="margin-top:5%;"><span data-letter="A">A</span></li>
+                 <li class="ot-letter-left" style="margin-top:5%;"><span data-letter="R">R</span></li>
+          
+                 <li class="ot-letter-top"  style="margin-top: 4%;margin-left: 20%"><span data-letter="S">S</span></li>
+                 <li class="ot-letter-left" style="margin-top: 4%;"><span data-letter="C">C</span></li>
+                 <li class="ot-letter-top" style="margin-top: 4%;"><span data-letter="H">H</span></li>
+                  <li class="ot-letter-right" style="margin-top: 4%;"><span data-letter="O">O</span></li>
+                 <li class="ot-letter-bottom" style="margin-top: 4%;"><span data-letter="O">O</span></li>
+                 <li class="ot-letter-right" style="margin-top: 4%;"><span data-letter="L">L</span></li>
+          </ul>
+       </div>
+    </div>
+</div>
+
+
+
+
+<!--hero cover -->
+<!--_______________________________________________________________________________________________________________________________________________-->
+
+<!--small screen-->
+<!--_______________________________________________________________________________________________________________________________________________-->
+<div class="w3-hide-large">
+      <div  style="background-color: #2D2D2D" id="home">
+         <img  src="images\icon.png" style="width: 60%;height: 60%;margin-left: 13%;margin-top: 30%">
+      </div>
+      <div class="w3-center"  style="margin-left: 10% ;margin-right: 10%;margin-top: 20%">
+         <p class="w3-border w3-medium">
+             Teach Student How To Learn,<br>
+             Our Goal Is To Transform Them.
+         </p>
+      </div>
+</div>
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                             About                                                                               -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+
+<!--_______________________________________________________________________________________________________________________________________________-->
+<!--Small Screen-->
+<!--_______________________________________________________________________________________________________________________________________________-->
+
+
+<div class="w3-hide-large ">
+    <div class="w3-white " style="width: 100%">
+         <div class="w3-content w3-container w3-padding-64 " id="about" style="margin-top: 40%">
+             <h3 class="w3-center w3-border">ABOUT US</h3>
+             <p class="w3-center">
+                   <em>
+                   The Venkateswar School
+                   </em>
+              </p>
+             
+             <p style=" margin-top: 6%; word-spacing: 4px;margin-right:4%;margin-left:4%; padding-right: 10px">
+                   Venkateswar School is an unique institution offering holistic and value based education to its pupils to support innovation and leadership in the child.
+              </p>
+
+             <p style="word-spacing: 4px;margin-right:4%;margin-left:4%; padding-right: 10px">
+                    Teaching in our school is given through qualified, committed and experienced teachers. Besides teaching, extra-curricular activities are given prime importance in our school in order to promote the inner-potentiality and all<br>round development of the student.
+              </p>
+
+             <p style="word-spacing: 4px;margin-right:4%;margin-left:4%; padding-right: 10px">
+                 It imparts high quality education in English Medium as per C.B.S.E. Syllabys to thestudents and gets the proud privilege of being a leading educational institution of the State.
+             </p>
+             
+
+             <p class="w3-button w3-center w3-text-white w3-hover-grey w3-myfont" id="show1" onclick="myFunction1()" style="margin-left: 30%;background-color: #2D2D2D">Show More</p>
+             
+             <div class="" id="showabout1" style="display: none;word-spacing: 4px;">
+                   <p style="margin-right:4%;margin-left:4%; padding-right: 10px">
+                       The Venkateswar School is run by the VEMS trust, having a group of Schools in and around Bhubaneswar.
+                    </p>
+
+                    <p style="margin-right:4%;margin-left:4%; padding-right: 10px">
+                    It imparts high quality education in English Medium as per C.B.S.E. Syllabys to the students and gets the proud privilege of being a leading educational institution of the State.
+                    </p>
+                    <p style="margin-right:4%;margin-left:4%; padding-right: 10px">
+                    Courses of studies are according to the syllabus prescribed by the VEMS trust, Bhubaneswar as per the latest guidelines and the syllabi issued by the N.C.E.R.T. New Delhi.
+                    </p>
+              </div>
+         </div>
+
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                        ( why ? ) container                                                                                 -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+   
+
+           <div class="w3-content w3-container w3-padding-64" id="about">
+                    <h3 class=" w3-border" style=""><span style="margin-left: 13%">Why Venkateswar School ?</span>
+                    </h3>
+ 
+                    <div class=""  style="word-spacing: 4px; margin-right:10%;margin-left:4%;margin-bottom: 20%">
+                        <p >
+                            Besides teaching, extra-curricular activities are given prime importance in our school in order to promote the inner-potentiality and all-round development of the student.
+                        </p>
+
+                         <p>
+                            Moral Education and yoga training is given to all students with a view to make them disciplined and sociable future citizens of the Country. 
+                         </p>
+ 
+                          <p>
+                             School have a strong program of core academic subjects such as English, history, mathematics, science, arts?
+                          </p>
+                    </div>
+          </div>
+   </div>
+
+
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                        For parents                                                                                -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+
+    <div class="w3-padding-large w3-white" style=" ">
+          <p class="w3-center w3-xxlarge w3-myfont w3-border-bottom w3-border-red" style="word-spacing: 4px; padding-top: 0px;">
+          For Parents
+          </p>
+          <div class="w3-row">
+              <div class="w3-col w3-large l5 w3-padding-xlarge">
+                    <div class="w3-card-8 w3-text-white w3-border w3-border-white" style="margin-top: 30px;  background-color: #2D2D2D">
+                          <p class="w3-padding-xlarge " style="  padding-top: 50px; word-spacing: 4px;">
+                                 Parents should check the School Diary Daily.</p>
+                    </div>
+    
+                    <div  class="w3-card-8 w3-text-white  w3-border w3-border-white" style="margin-top: 45px;background-color: #2D2D2D">
+                          <p class=" w3-padding-xlarge " style="padding-top: 50px; word-spacing: 4px;">
+                                Parents should ensure the functionality of their child.</p>
+                    </div>
+             </div>
+             <div class="w3-col w3-large l6">
+                    <div class="w3-card-8 w3-text-white  w3-border w3-border-white" style="margin-top: 45px; margin-left: 20px;background-color: #2D2D2D">
+                          <p class="w3-padding-xlarge " style="padding-top: 50px; word-spacing: 4px;">
+                              Parents should acknowledge the late attendance in the school diary every month.
+                          </p>
+                    </div>
+                    <div class="w3-card-8 w3-text-white w3-border w3-border-white" style="margin-top: 45px; margin-left: 20px;background-color: #2D2D2D"> 
+                           <p class="w3-padding-xlarge " style="padding-top: 50px; word-spacing: 4px;" >
+                               Parents should observe their child uniform.
+                           </p>
+                    </div>
+              </div>    
+           </div>
+           <p class="w3-myfont" style="word-spacing: 4px;margin-top: 6%;margin-bottom: 6%"> 
+             <i>
+                 Parents and guardians are requested to extend their whole hearted co-operation for the smooth running of the school and proper education of their child/ ward.
+             </i>
+           </p>
+     </div>
+
+
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                        For students                                                                                -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+
+     <div style="background-color: #2D2D2D" >
+       <p>.</p>
+       <div class="w3-padding-large w3-large" style=" word-spacing: 5px;padding-bottom: 5%">
+       
+           <p class="w3-center w3-xxlarge w3-text-white w3-myfont w3-border-bottom w3-border-white" style="word-spacing: 4px; padding-top: 0px;">
+                 Mandatory Information
+            </p>
+
+            <div class="w3-panel w3-text-black w3-myfont w3-round-xlarge w3-leftbar" style="background-color: #727373">
+                  <p>Computer training is also given to our students from lower classes on extra payments.</p>
+            </div>
+            
+            <div class="w3-panel w3-text-black w3-myfont w3-round-xlarge w3-leftbar" style="background-color: #727373">
+                  <p>The timing will be from 8.00 A.M. to 12.00 Noon. Students should reach the school by 7.50 A.M. as the school gate will be closed at 8.00 A.M. sharp.</p>
+            </div>
+
+            <div class="w3-panel w3-text-black w3-myfont w3-round-xlarge w3-leftbar" style="background-color: #727373">
+                  <p>As per the CBSE norms we have adopted Continuous and comprehensive evaluation (CCE) system for assessment.</p>
+            </div>
+            
+            <div class="w3-panel w3-text-black w3-myfont w3-round-xlarge  w3-leftbar" style=" background-color: #727373 ;margin-bottom: 10%">
+                 <p > 75% of attendance on working days of the school in a year is compulsory.</p>
+            </div>
+            <br>
+            <p>.</p>
+      </div>
+     </div>
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                        contact us                                                                               -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+
+      <div class="w3-white ">
+         <p>.</p>
+         <p class="w3-center w3-text-black w3-xlarge" style=" word-spacing: 4px;margin-top: 4%">CONTACT US</p>
+         <p class="w3-center w3-text-grey w3-wide" style="margin-left: 2%;margin-right: 2%">WE LOVE TO HEAR YOU</p>
+         <br>
+         <br>
+         <div class="w3-row " style="margin-left: 20% ; padding-bottom: 15%">
+             <form name="contactform" method="post" action="send_form_email.php">
+                 <div class="w3-col m6 ">
+                     <input type="text" id="fname" name="first_name" placeholder="Enter Your Name"><br>
+                          <span ><b>NAME</b></span>
+<br><br>             <input type="text" id="lname" name="email" placeholder="Enter Your Email"><br>
+                          <span><b>EMAIL</b></span>
+                 </div>
+                 
+                 <div class="w3-col m6" style="margin-left: 5%">
+                      <textarea name="comments" placeholder="Your Message" style="cursor: pointer"></textarea>
+                 </div> 
+                      <input type="submit" style="cursor: pointer" class="w3-center  w3-black w3-text-white w3-border w3-border-white w3-margin-top w3-small w3-padding-medium" value="Send Message " >
+             </form>                   
+         </div>
+        </div>
+</div>
+
+
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+<!--                                                        About                                                                               -->
+<!-- _______________________________________________________________________________________________________________________________________________________________-->
+
+
+<!--_______________________________________________________________________________________________________________________________________________-->
+<!--Large Screen-->
+<!--_______________________________________________________________________________________________________________________________________________-->
+
+<div class="w3-white w3-hide-medium w3-hide-small" style="width: 100%" id="why">
+    <div class="w3-content w3-container w3-padding-64 "  id="about" style="margin-top: 40%">
+       <div class="wow fadeInDown" data-wow-offset="300">
+          <h3 class="w3-center w3-border">
+              ABOUT US
+          </h3>
+  
+          <p class="w3-center">
+              <em>The Venkateswar School</em>
+          </p>
+  
+           <p style=" margin-top: 6%; word-spacing: 4px;margin-right:4%;margin-left:4%">
+                  Venkateswar School is an unique institution offering holistic and value based education to its pupils to support innovation and leadership in the child.
+           </p>
+ 
+           <p style="word-spacing: 4px;margin-right:4%;margin-left:4%">
+                   Teaching in our school is given through qualified, committed and experienced teachers. Besides teaching, extra-curricular activities are given prime importance in our school in order to promote the inner-potentiality and all<br>round development of the student.
+           </p>
+
+            <p style="word-spacing: 4px;margin-right:4%;margin-left:4%">
+                   It imparts high quality education in English Medium as per C.B.S.E. Syllabys to thestudents and gets the proud privilege of being a leading educational institution of the State.
+            </p>
+        </div>
+
+
+        <div class="w3-button w3-center w3-text-white w3-hover-grey w3-myfont" id="show" onclick="myFunction()" style="margin-left: 40%;background-color: #2D2D2D">
+             Show More
+        </div>
+
+        <div class="" id="showabout" style="display:none ;word-spacing: 4px;">
+
+             <p style="margin-right:4%;margin-left:4%">
+                  The Venkateswar School is run by the VEMS trust, having a group of Schools in and around Bhubaneswar.
+             </p>
+
+             <p style="margin-right:4%;margin-left:4%">
+                   It imparts high quality education in English Medium as per C.B.S.E. Syllabys to the students and gets the proud privilege of being a leading educational institution of the State.
+             </p>
+
+             <p style="margin-right:4%;margin-left:4%">
+                    Courses of studies are according to the syllabus prescribed by the VEMS trust, Bhubaneswar as per the latest guidelines and the syllabi issued by the N.C.E.R.T. New Delhi.
+             </p>
+
+         </div>
+
+
+   </div>
+
+
+                                       <!-- Container (Why ) -->
+
+
+   <div class="w3-content w3-container w3-padding-64 wow fadeInDown" data-wow-offset="300" id="about why">
+        <h3 class=" w3-border" style=""><span style="margin-left: 65%">
+            Why Venkateswar School ?</span>
+        </h3>
+ 
+        <div class=""  style="word-spacing: 4px; margin-right:4%;margin-left:4%">
+            <p >
+               Besides teaching, extra-curricular activities are given prime importance in our school in order to promote the inner-potentiality and all-round development of the student.
+            </p>
+            
+            <p>
+                Moral Education and yoga training is given to all students with a view to make them disciplined and sociable future citizens of the Country. 
+            </p>
+
+             <p>
+                School have a strong program of core academic subjects such as English, history, mathematics, science, arts?
+             </p>
+        </div>
+    </div>
+
+
+<!--Swiper-->
+<!--_______________________________________________________________________________________________________________________________________________-->
+<!--Large Screen-->
+<!--_______________________________________________________________________________________________________________________________________________-->
+
+    <!-- Swiper -->
+  <div>
+    <h2 class="w3-center" style="font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;">What They said ?</h2>
+    <div class="w3-hide-small w3-hide-medium swiper-container" class="w3-padding-large " >
+    
+        <div class="swiper-wrapper" style="margin-top: 4%">
+            <div class="swiper-slide w3-black"><img src="images\foto1.jpg" width="60%" style="height: 500px;"></div>
+            <div class="swiper-slide w3-light-grey"><img src="images\foto2.png" width="50%" style="height: 500px;"></div>
+            <div class="swiper-slide w3-light-grey"><img src="images\foto3.jpg" width="50%" style="height: 500px;"></div>
+            <div class="swiper-slide w3-black"><img src="images\foto4.jpg" width="50%" style="height: 500px;"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination "></div>
+    </div>
+  </div>
+
+
+
+                                                          <!--   for parents    -->
+
+
+
+
+   <div class="w3-padding-large " style="margin-top: 7% ;  ">
+      <p class="w3-center w3-xxlarge w3-myfont w3-border-bottom w3-border-red" style="word-spacing: 4px; padding-top: 0px;">
+         For Parents
+      </p>
+      <div class="w3-row">
+         <div class="w3-col w3-large l5 w3-padding-xlarge">
+            <div class="w3-card-8 w3-text-white w3-border w3-border-white wow bounceInLeft" data-wow-offset="300" style="margin-top: 30px;  background-color: #2D2D2D">
+                 <p class="w3-padding-xlarge " style="padding-top: 50px; word-spacing: 4px;">
+                  Parents should check the School Diary Daily.
+                  </p>
+            </div>
+            <div  class="w3-card-8 w3-text-white  w3-border w3-border-white wow bounceInLeft" data-wow-offset="300" style="margin-top: 45px;background-color: #2D2D2D">
+                  <p class=" w3-padding-xlarge " style="padding-top: 50px; word-spacing: 4px;">
+                    Parents should ensure the functionality of their child.
+                    </p>
+             </div>
+         </div>
+         <div class="w3-col w3-large l6">
+             <div class="w3-card-8 w3-text-white  w3-border w3-border-white wow bounceInRight" data-wow-offset="300" style="margin-top: 45px; margin-left: 20px;background-color: #2D2D2D">
+                  <p class="w3-padding-xlarge " style="padding-top: 50px; word-spacing: 4px;">
+                     Parents should acknowledge the late attendance in the school diary every month.
+                  </p>
+              </div>
+   
+             <div class="w3-card-8 w3-text-white w3-border w3-border-white wow bounceInRight" data-wow-offset="300" style="margin-top: 45px; margin-left: 20px;background-color: #2D2D2D"> 
+                   <p class="w3-padding-xlarge " style="padding-top: 50px; word-spacing: 4px;" >
+                      Parents should observe their child uniform.
+                    </p>
+              </div>
+         </div>    
+      </div>
+      <p class="w3-myfont" style="word-spacing: 4px;margin-top: 6%;margin-bottom: 6%"> 
+         <i>Parents and guardians are requested to extend their whole hearted co-operation for the smooth running of the school and proper education of their child/ ward.</i>
+      </p>
+    </div>
+
+
+
+                                                             <!--for students-->
+
+
+
+    <div style="background-color: #2D2D2D" >
+         <p>.</p>
+         <div class="w3-padding-large w3-large" style=" word-spacing: 5px;padding-bottom: 5%">
+              <p class="w3-center w3-xxlarge w3-text-white w3-myfont w3-border-bottom w3-border-white" style="word-spacing: 4px; padding-top: 0px;">
+                  Mandatory Information
+              </p>
+              <div class="w3-panel w3-myfont w3-round-xlarge w3-leftbar wow slideInLeft" data-wow-offset="300" style="background-color: #727373">
+                  <p>Computer training is also given to our students from lower classes on extra payments.</p>
+              </div>
+
+              <div class="w3-panel w3-myfont w3-round-xlarge w3-leftbar wow slideInRight" data-wow-offset="300" style="background-color: #727373">
+                   <p>The timing will be from 8.00 A.M. to 12.00 Noon. Students should reach the school by 7.50 A.M. as the school gate will be closed at 8.00 A.M. sharp.</p>
+              </div>
+             
+              <div class="w3-panel w3-myfont w3-round-xlarge w3-leftbar wow slideInLeft" data-wow-offset="30" style="background-color: #727373">
+                   <p>As per the CBSE norms we have adopted Continuous and comprehensive evaluation (CCE) system for assessment.</p>
+              </div>
+
+               <div class="w3-panel w3-myfont w3-round-xlarge  w3-leftbar wow slideInRight" style=" background-color: #727373 ;margin-bottom: 10%">
+                   <p > 75% of attendance on working days of the school in a year is compulsory.</p>
+               </div>
+<br>
+          <p>.</p>
+          </div>
+   </div>
+
+    <div class="w3-white">
+      <p>.</p>
+      <p class="w3-center w3-text-black w3-xlarge" style=" word-spacing: 4px;margin-top: 4%">CONTACT US</p>
+      <p class="w3-center w3-text-grey w3-wide">WE LOVE TO HEAR YOU</p>
+  <br>
+  <br>
+       <div class="w3-row " style="margin-left: 20% ; padding-bottom: 15%">
+          <form name="contactform" method="post" action="send_form_email.php">
+           <div class="w3-col m6 ">
+                   <input type="text" name="first_name" id="fname" required="required" placeholder="Enter Your Name">
+                   <br>
+                      <span ><b>
+                              NAME</b>
+                       </span>
+                    <br><br>
+                    <input type="text" for="email" id="lname" name="email" placeholder="Enter Your Email">
+                    <br>
+                       <span><b>
+                              EMAIL</b>
+                      </span>
+            </div>
+            <div class="w3-col m6" style="margin-left: -10%">
+                 <textarea placeholder="Your Message" name="comments"></textarea>
+            </div> 
+     
+             <input type="submit" class="w3-center  w3-black w3-text-white w3-border w3-border-white w3-margin-top w3-medium w3-padding-medium" value="Send Message ">  
+        </form>        
+         </div>
+    </div>
+
+</div>
+
+
+
+
+                                                               <!-- Footer -->
+
+
+<footer class="w3-center w3-padding-64 " style="background-color: #2D2D2D">
+     <a href="#home" class="w3-button">
+            <i class="fa fa-arrow-up w3-margin-right"></i>
+            To the top
+     </a>
+     <p style="word-spacing: 4px">Designed by : <span class="w3-wide">Harshit Pandey </span></p>
+     <p onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer; margin-top: 2%"><span class="w3-white w3-padding-large"> harshitpandey678@gmail.com </span> <i class="fa fa-globe"></i></p>
+
+</footer>
+<div id="id01" class="w3-modal w3-hide-small">
+    <div class="w3-row w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:800px">
+
+      <div class="w3-col l5 w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-display-topright close" title="Close Modal">&times;</span>
+        <img src="images/developer.png" alt="developer_contact" style="width:50%" class=" w3-margin-top">
+        <p class="w3-myfont">For Feedbacks and,</p>
+        <p class="w3-myfont">Any Website Related Issues</p>
+        <p class="w3-wide w3-text-black" style="margin-top: 5%"><b>Please Inbox Me!.</b></p>
+      </div>
+
+      <div class="w3-col l6" style="padding-bottom: 5%; padding-top: 5%">
+         <form name="contactform" method="post" action="send_form_email1.php">
+           <div >
+                   <input type="text" name="first_name" id="fname" required="required" placeholder="Your Name">
+                   <br>
+                    <br><br><input type="text" for="email" id="lname" name="email" placeholder="Your Email">
+                   <br>
+                   <textarea placeholder="Your Feedback" name="comments" style="margin-top: 8%;"></textarea>
+            </div>
+        <input type="submit" class="w3-center  w3-black w3-text-white w3-border w3-border-white w3-margin-top w3-medium w3-padding-medium"  value="Send Message ">  
+        </form> 
+      </div>
+      
+    </div>
+  </div>
+
+
+
+<script src="dist/wow.js"></script>
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script src="js/swiper.js"></script>
+<script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+</script>
+<script>
+ 
+      $('.demo').on('click', function(e) {
+        $('html, body').animate(
+        {
+         scrollTop: $(window).scrollTop() + 600
+        }, 800);
+      });
+
+
+</script>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        if($("div").scrollTop() < 32 )
+        {
+        $("div").css({"display":"none"});
+        }
+        else
+        {
+        $("div").css({"display":"none"});
+        }     
+    });
+});
+</script>
+
+<script type="text/javascript">
+function myFunction() 
+{       $("#showabout").css({"display":"inline"});
+        $("#show").css({"display":"none"});
+         
+}
+</script>
+
+
+<script type="text/javascript">
+function myFunction1() 
+{       $("#showabout1").css({"display":"inline"});
+        $("#show1").css({"display":"none"});
+         
+}
+</script>
+</body>
+</html>
